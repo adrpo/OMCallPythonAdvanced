@@ -1,8 +1,13 @@
 
 # change these to suit your platform!
-PYTHON_INCLUDE_DIR=-I"e:/bin/py64/include"
-PYTHON_LIBRARY_DIR=-L"e:/bin/py64"
-PYTHON_LIBRARY=-lpython38
+
+PYTHON_INCLUDE_DIR=-I"C:\Users\*Username*\AppData\Local\Programs\Python\Python39\include"
+
+PYTHON_LIBRARY_DIR=-L"C:\Users\*Username*\AppData\Local\Programs\Python\Python39"
+
+
+PYTHON_LIBRARY=-lpython39
+
 CFLAGS=-g ${PYTHON_INCLUDE_DIR}
 LDFLAGS=${PYTHON_LIBRARY_DIR} ${PYTHON_LIBRARY}
 

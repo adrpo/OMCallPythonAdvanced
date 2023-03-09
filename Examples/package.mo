@@ -1,13 +1,16 @@
 within OMCallPythonAdvanced;
-package Examples
 
+package Examples
+  extends Modelica.Icons.ExamplesPackage;
   import OMCallPythonAdvanced.Py;
 
   model Test
+    extends Modelica.Icons.Example;
     Py.PythonHandle pyHandle = Py.PythonHandle() "Initialize Python";
-    constant String pyProgram = 
+    String pyProgram = 
 "def multiply(x, y):
   print(\"Will compute\", x, \"times\", y)
+  print('Time: " + String(time) + "')
   return x * y
 ";
     parameter String pyModuleName = "__main__";
